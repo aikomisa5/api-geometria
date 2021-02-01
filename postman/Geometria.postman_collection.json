@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "9885a894-41cb-4383-aa00-8e4ee67d656a",
+		"name": "Geometria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Cuadrado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/figuras-geometricas/cuadrados/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"figuras-geometricas",
+						"cuadrados",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Circulo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/figuras-geometricas/circulos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"figuras-geometricas",
+						"circulos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Triangulo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/figuras-geometricas/triangulos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"figuras-geometricas",
+						"triangulos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Cuadrado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"base\":20.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/figuras-geometricas/cuadrados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"figuras-geometricas",
+						"cuadrados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Circulo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"radio\":10.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/figuras-geometricas/circulos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"figuras-geometricas",
+						"circulos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Triangulo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"base\":7.5,\r\n    \"altura\":15.2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/figuras-geometricas/triangulos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"figuras-geometricas",
+						"triangulos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
