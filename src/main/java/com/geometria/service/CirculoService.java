@@ -26,13 +26,7 @@ public class CirculoService {
 
 	public Circulo getCirculo(Long id) throws NoContentException{
 
-		Circulo circulo = repository.findById(id).orElse(null);
-
-		if (circulo != null) {
-			return circulo;
-		}else {
-			throw new NoContentException("No se ha encontrado un circulo con id: " + id);
-		}
+		return repository.findById(id).orElseThrow(() -> new NoContentException("No se ha encontrado un circulo con id: " + id));
 	}
 
 	public CirculoResponse getCirculoResponse(Long id) throws NoContentException{

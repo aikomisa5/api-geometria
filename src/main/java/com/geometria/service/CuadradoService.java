@@ -26,13 +26,8 @@ public class CuadradoService {
 
 	public Cuadrado getCuadrado(Long id) throws NoContentException{
 		
-		Cuadrado cuadrado = repository.findById(id).orElse(null);
+		return repository.findById(id).orElseThrow(() -> new NoContentException("No se ha encontrado un cuadrado con id: " + id));
 		
-		if (cuadrado != null) {
-			return cuadrado;
-		}else {
-			throw new NoContentException("No se ha encontrado un cuadrado con id: " + id);
-		}
 	}
 
 	public CuadradoResponse getCuadradoResponse(Long id) throws NoContentException{

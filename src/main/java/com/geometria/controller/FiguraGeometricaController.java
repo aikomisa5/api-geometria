@@ -19,6 +19,8 @@ import com.geometria.dto.request.TrianguloRequest;
 import com.geometria.dto.response.CirculoResponse;
 import com.geometria.dto.response.CuadradoResponse;
 import com.geometria.dto.response.TrianguloResponse;
+import com.geometria.exceptions.BadRequestException;
+import com.geometria.exceptions.NoContentException;
 import com.geometria.service.CirculoService;
 import com.geometria.service.CuadradoService;
 import com.geometria.service.TrianguloService;
@@ -44,7 +46,7 @@ public class FiguraGeometricaController {
 	public ResponseEntity<CuadradoResponse> getCuadrado(
 			@ApiIgnore @RequestHeader Map<String, String> headers,
 			@PathVariable Long idCuadrado
-			) throws Exception{
+			) throws NoContentException{
 		
 		CuadradoResponse response = cuadradoService.getCuadradoResponse(idCuadrado);
 		
@@ -56,7 +58,7 @@ public class FiguraGeometricaController {
 	public ResponseEntity<CuadradoResponse> postCuadrado(
 			@ApiIgnore @RequestHeader Map<String, String> headers,
 			@RequestBody CuadradoRequest cuadrado
-			) throws Exception{
+			) throws BadRequestException{
 		
 		CuadradoResponse response = cuadradoService.saveCuadradoRequest(cuadrado);
 		
@@ -68,7 +70,7 @@ public class FiguraGeometricaController {
 	public ResponseEntity<CirculoResponse> getCirculo(
 			@ApiIgnore @RequestHeader Map<String, String> headers,
 			@PathVariable Long idCirculo
-			) throws Exception{
+			) throws NoContentException{
 		
 		CirculoResponse response = circuloService.getCirculoResponse(idCirculo);
 		
@@ -80,7 +82,7 @@ public class FiguraGeometricaController {
 	public ResponseEntity<CirculoResponse> postCirculo(
 			@ApiIgnore @RequestHeader Map<String, String> headers,
 			@RequestBody CirculoRequest circulo
-			) throws Exception{
+			) throws BadRequestException{
 		
 		CirculoResponse response = circuloService.saveCirculoRequest(circulo);
 		
@@ -92,7 +94,7 @@ public class FiguraGeometricaController {
 	public ResponseEntity<TrianguloResponse> getTriangulo(
 			@ApiIgnore @RequestHeader Map<String, String> headers,
 			@PathVariable Long idTriangulo
-			) throws Exception{
+			) throws NoContentException{
 		
 		TrianguloResponse response = trianguloService.getTrianguloResponse(idTriangulo);
 		
@@ -104,7 +106,7 @@ public class FiguraGeometricaController {
 	public ResponseEntity<TrianguloResponse> postTriangulo(
 			@ApiIgnore @RequestHeader Map<String, String> headers,
 			@RequestBody TrianguloRequest triangulo
-			) throws Exception{
+			) throws BadRequestException{
 
 		TrianguloResponse response = trianguloService.saveTrianguloRequest(triangulo);
 

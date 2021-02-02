@@ -26,13 +26,8 @@ public class TrianguloService {
 	
 	public Triangulo getTriangulo(Long id) throws NoContentException{
 		
-		Triangulo triangulo = repository.findById(id).orElse(null);
+		return repository.findById(id).orElseThrow(() -> new NoContentException("No se ha encontrado un triangulo con id: " + id));
 		
-		if (triangulo != null) {
-			return triangulo;
-		}else {
-			throw new NoContentException("No se ha encontrado un triangulo con id: " + id);
-		}
 	}
 	
 	public TrianguloResponse getTrianguloResponse(Long id) throws NoContentException{
